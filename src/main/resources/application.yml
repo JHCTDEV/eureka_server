@@ -1,19 +1,5 @@
-server:
-  port: 9093
-eureka:
-  client:
-    #telling the server not to register himself in the service registry
-    registerWithEureka: false
-    fetchRegistry: false
-    serviceUrl:
-      defaultZone: http://localhost:9093
-  server:
-    waitTimeInMsWhenSyncEmpty: 0    #wait time for subsequent sync
-  instance:
-    prefer-ip-address: true
-    hostname: localhost
-
-logging:
-  level:
-    '[com.netflix.eureka]': 'OFF'
-    '[com.netflix.discovery]': 'OFF'
+spring:
+  application:
+    name: eurekaServer-service
+  config:
+    import: optional:configserver:http://root:123a@localhost:8099
