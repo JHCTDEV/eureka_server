@@ -25,9 +25,9 @@ jobs:
     - name: Build and push container image to registry
       uses: docker/build-push-action@v1
       with:
-        username: ${{ secrets.AzureAppService_ContainerUsername_59f90819cbb445758dea41fa690c1bdc }}
-        password: ${{ secrets.AzureAppService_ContainerPassword_bafc0a8715ee4ff8969885fe73171bed }}
-        repository: jhctdev/config-server
+        username: ${{ secrets.AzureAppService_ContainerUsername_62f5281a002b4079a87f2c063af663c7 }}
+        password: ${{ secrets.AzureAppService_ContainerPassword_b5acf7a65ec64f5ebb4b561c2054afe0 }}
+        repository: jhctdev/eureka-server
         tags: ${{ github.sha }}
 
   deploy:
