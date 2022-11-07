@@ -45,4 +45,4 @@ jobs:
         app-name: 'eurekabootcamp'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_edc0480164a049c586f314cc8211691c }}
-        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_62f5281a002b4079a87f2c063af663c7 }}/jhctdev/eureka-server:${{ github.sha }}'
+        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_62f5281a002b4079a87f2c063af663c7 }}/eureka-server:${{ github.sha }}'
